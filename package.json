@@ -1,0 +1,41 @@
+{
+  "name": "apk-resigner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A local desktop tool for signing and verifying hardened Android APKs.",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"wait-on tcp:5173 && electron .\"",
+    "build:web": "vite build",
+    "build": "npm run build:web && electron-builder",
+    "build:dir": "npm run build:web && electron-builder --dir"
+  },
+  "dependencies": {
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "latest",
+    "concurrently": "latest",
+    "electron": "latest",
+    "electron-builder": "latest",
+    "vite": "latest",
+    "wait-on": "latest"
+  },
+  "build": {
+    "appId": "com.local.apkresigner",
+    "productName": "APK Resigner",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "target": ["dmg", "zip"]
+    },
+    "artifactName": "${productName}-${version}-${arch}.${ext}"
+  }
+}

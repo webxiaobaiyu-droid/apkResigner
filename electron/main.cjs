@@ -14,6 +14,7 @@ function createWindow() {
     minWidth: 760,
     minHeight: 640,
     title: 'APK Resigner',
+    icon: path.join(__dirname, '..', 'build', 'icon.png'),
     backgroundColor: '#f4f6f8',
     webPreferences: {
       preload: path.join(__dirname, 'preload.cjs'),

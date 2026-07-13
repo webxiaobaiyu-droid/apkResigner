@@ -30,10 +30,12 @@
     "files": [
       "dist/**/*",
       "electron/**/*",
+      "build/icon.png",
       "package.json"
     ],
     "mac": {
       "category": "public.app-category.developer-tools",
+      "icon": "build/icon.icns",
       "target": ["dmg", "zip"]
     },
     "artifactName": "${productName}-${version}-${arch}.${ext}"

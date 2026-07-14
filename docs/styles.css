@@ -72,16 +72,16 @@ h1 { margin: 0; font-size: clamp(66px, 9vw, 132px); line-height: .92; letter-spa
 h2 { margin: 0; font-size: clamp(34px, 5vw, 62px); line-height: 1.08; letter-spacing: 0; }
 .intro p { max-width: 760px; margin: 24px 0 0; color: var(--muted); font-size: 18px; }
 
-.feature-band { padding: 110px max(24px, calc((100vw - 1200px) / 2)); background: #dce8e4; color: #10191c; }
+.feature-band { padding: 110px max(24px, calc((100vw - 1200px) / 2)); background: #132126; color: var(--ink); border-block: 1px solid #294047; }
 .section-heading { max-width: 720px; }
-.feature-band .eyebrow { color: #08796d; }
-.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 72px; border-top: 1px solid #aabbb6; }
-.feature-grid article { padding: 34px 36px 10px 0; border-right: 1px solid #aabbb6; }
+.feature-band .eyebrow { color: var(--mint); }
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 72px; border-top: 1px solid #355057; }
+.feature-grid article { padding: 34px 36px 10px 0; border-right: 1px solid #355057; }
 .feature-grid article + article { padding-left: 36px; }
 .feature-grid article:last-child { border-right: 0; }
-.feature-number { color: #08796d; font: 700 13px ui-monospace, monospace; }
+.feature-number { color: var(--amber); font: 700 13px ui-monospace, monospace; }
 h3 { margin: 28px 0 12px; font-size: 22px; letter-spacing: 0; }
-.feature-grid p { color: #445552; }
+.feature-grid p { color: #aebdb9; }
 
 .workflow { max-width: 1200px; margin: 0 auto; padding: 120px 24px; }
 .workflow ol { list-style: none; margin: 70px 0 0; padding: 0; border-top: 1px solid var(--line); }
@@ -128,7 +128,7 @@ footer { min-height: 80px; padding: 25px max(24px, calc((100vw - 1200px) / 2)); 
   .intro, .requirements, .final-cta { padding: 76px 20px; grid-template-columns: 1fr; gap: 30px; }
   .feature-band, .workflow, .security { padding: 76px 20px; }
   .feature-grid { grid-template-columns: 1fr; margin-top: 48px; }
-  .feature-grid article, .feature-grid article + article { padding: 28px 0; border-right: 0; border-bottom: 1px solid #aabbb6; }
+  .feature-grid article, .feature-grid article + article { padding: 28px 0; border-right: 0; border-bottom: 1px solid #355057; }
   .security { grid-template-columns: 1fr; gap: 42px; }
   .terminal { box-shadow: 8px 8px 0 #1c343a; }
   .terminal pre { padding: 20px; font-size: 11px; }

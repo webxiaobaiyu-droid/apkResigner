@@ -2,6 +2,8 @@
 
 一个基于 Vue 3 与 Electron 开发的本地 APK 二次签名工具。适用于 APK 经梆梆等加固服务处理后，需要使用原应用签名证书重新签名并验证的场景。
 
+**项目官网：** [https://webxiaobaiyu-droid.github.io/apkResigner/](https://webxiaobaiyu-droid.github.io/apkResigner/)
+
 > 本项目仅供 Android 安全、应用加固与签名机制的学习和研究使用。请仅处理你本人所有或已获得明确授权的应用。严禁用于篡改、盗版、绕过授权或其他违法用途。使用者应自行承担因不当使用产生的全部责任。
 
 ## 功能特性

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="APK Resigner 是一款面向 Android 应用加固场景的本地 APK 二次签名与证书验证工具。" />
+    <meta name="theme-color" content="#0b1418" />
+    <title>APK Resigner - 本地 APK 二次签名工具</title>
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="APK Resigner 首页">
+        <img src="./assets/icon.png" alt="" />
+        <span>APK Resigner</span>
+      </a>
+      <nav aria-label="主导航">
+        <a href="#features">能力</a>
+        <a href="#workflow">使用流程</a>
+        <a href="#security">安全说明</a>
+      </nav>
+      <a class="header-link" href="https://github.com/webxiaobaiyu-droid/apkResigner" target="_blank" rel="noreferrer">GitHub</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-mark" aria-hidden="true"><img src="./assets/icon.png" alt="" /></div>
+        <div class="hero-content">
+          <p class="eyebrow">ANDROID SIGNING UTILITY · macOS</p>
+          <h1>APK Resigner</h1>
+          <p class="hero-copy">为梆梆等应用加固后的 APK，重新写入原应用签名并立即完成证书验证。文件、证书和密码全程留在本机。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/webxiaobaiyu-droid/apkResigner" target="_blank" rel="noreferrer">前往 GitHub</a>
+            <a class="button secondary" href="#workflow">了解流程</a>
+          </div>
+          <dl class="hero-facts">
+            <div><dt>处理位置</dt><dd>仅本机</dd></div>
+            <div><dt>签名方案</dt><dd>V1 + V2</dd></div>
+            <div><dt>核心工具</dt><dd>apksigner</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="intro" aria-label="产品简介">
+        <div class="section-index">01 / OVERVIEW</div>
+        <div>
+          <h2>加固完成，签名回归原位。</h2>
+          <p>APK Resigner 将环境检测、证书选择、二次签名和结果验证收拢进一个安静的桌面工作流。它不会覆盖原文件，也不会保存你的密码。</p>
+        </div>
+      </section>
+
+      <section class="feature-band" id="features">
+        <div class="section-heading">
+          <p class="eyebrow">CORE CAPABILITIES</p>
+          <h2>签名需要的步骤，一个界面完成</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span class="feature-number">01</span>
+            <h3>自动发现环境</h3>
+            <p>查找 Android SDK Build-Tools 中最新的 apksigner，并自动识别 Android Studio 或 DevEco Studio 的 JDK。</p>
+          </article>
+          <article>
+            <span class="feature-number">02</span>
+            <h3>可靠生成新文件</h3>
+            <p>选择 APK、JKS 或 Keystore 后输出全新文件，不覆盖原始 APK，也不会覆盖已有结果。</p>
+          </article>
+          <article>
+            <span class="feature-number">03</span>
+            <h3>签名后立即验证</h3>
+            <p>同时启用 V1 与 V2 签名，完成后执行详细验证并展示证书信息，失败时自动清理无效输出。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="workflow" id="workflow">
+        <div class="section-heading">
+          <p class="eyebrow">WORKFLOW</p>
+          <h2>四步完成二次签名</h2>
+        </div>
+        <ol>
+          <li><span>01</span><div><h3>选择加固 APK</h3><p>载入本人所有或已获授权的加固后应用。</p></div></li>
+          <li><span>02</span><div><h3>选择原签名证书</h3><p>支持 JKS、Keystore 与常用证书库格式。</p></div></li>
+          <li><span>03</span><div><h3>填写证书信息</h3><p>输入 Key Alias、证书库密码和私钥密码。</p></div></li>
+          <li><span>04</span><div><h3>签名并验证</h3><p>生成新 APK，自动输出完整验证报告。</p></div></li>
+        </ol>
+      </section>
+
+      <section class="security" id="security">
+        <div class="security-copy">
+          <p class="eyebrow">LOCAL BY DESIGN</p>
+          <h2>敏感材料不离开设备</h2>
+          <p>工具没有上传服务。APK、签名证书、Alias 与密码仅用于当前本地操作，密码在成功或失败后都会立即从界面清空。</p>
+        </div>
+        <div class="terminal" aria-label="签名验证示例">
+          <div class="terminal-bar"><span></span><span></span><span></span><b>verification</b></div>
+          <pre><code>$ apksigner verify --verbose --print-certs
+Verifies
+Verified using v1 scheme: true
+Verified using v2 scheme: true
+Signer certificate SHA-256 digest: ...</code></pre>
+        </div>
+      </section>
+
+      <section class="requirements">
+        <div><p class="eyebrow">REQUIREMENTS</p><h2>开始之前</h2></div>
+        <ul>
+          <li><strong>macOS</strong><span>当前桌面构建平台</span></li>
+          <li><strong>Android Studio</strong><span>包含 SDK Build-Tools</span></li>
+          <li><strong>原应用证书</strong><span>JKS 或 Keystore</span></li>
+        </ul>
+      </section>
+
+      <section class="disclaimer">
+        <strong>仅限学习与授权场景</strong>
+        <p>本项目仅供 Android 安全、应用加固与签名机制的学习研究使用。请仅处理你本人所有或已获得明确授权的应用，严禁用于篡改、盗版、绕过授权或其他违法用途。</p>
+      </section>
+
+      <section class="final-cta">
+        <img src="./assets/icon.png" alt="APK Resigner 图标" />
+        <div><p class="eyebrow">OPEN SOURCE</p><h2>让 APK 签名更直接。</h2></div>
+        <a class="button primary" href="https://github.com/webxiaobaiyu-droid/apkResigner" target="_blank" rel="noreferrer">前往 GitHub</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>APK Resigner</span>
+      <span>Vue 3 · Electron · apksigner</span>
+      <span>仅供学习研究与合法授权用途</span>
+    </footer>
+  </body>
+</html>
